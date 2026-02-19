@@ -41,6 +41,33 @@ app.get('/allStudents',(request,response)=>{
 
   });
 });
+
+/// Delete Srudent By Id
+app.delete('/deleteStudent/id/:id',(request,respnse)=>{
+const sId=parseInt(request.params.id);
+const sqlQ="DELETE FROM students WHERE id=?";
+
+db.query(sqlQ,[sId],(error,result)=>{
+   if(error){
+            response.status(500).json({message:"Server internal Errors:"+error})
+        }
+        if(result.affectedRows===0){
+
+ respnse.status(404).json({
+        message:"Student Not Found"
+    }) 
+
+        }
+        else{
+            
+ respnse.status(201).json({
+        message:"Student Deleted Successfully",
+        sId
+    }) 
+        }
+
+})});
+
 app.listen(3000,()=>{
   console.log("server is running");
 })
