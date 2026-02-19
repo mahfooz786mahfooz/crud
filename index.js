@@ -1,14 +1,25 @@
 const express=require('express');
 const app= express();
 app.use(express.json());
+
 const students = [
-   { id:1,name :"sohit",
-    email :"sohit@gmail.com",
-    add:"marhaurah",
-    moblile:"74810594822"} 
+   { id:1,name :"mahfooz",
+    email :"mahfooz2563@gmail.com",
+    add:"amnour",
+    moblile:"7400000022"} ,
+
+      { id:2,name :"Ankit",
+    email :"ankit@gmail.com",
+    add:"amnour",
+    moblile:"7400000022"} ,
+
+      { id:3,name :"Raman",
+    email :"raman@gmail.com",
+    add:"amnour",
+    moblile:"7400000022"} 
   ];
 
-  app.post('/hhhs',(req,res)=>{
+  app.post('/addStudent',(req,res)=>{
     const student = {
       id:students.length+1,
       email:req.body.email,
@@ -22,7 +33,7 @@ const students = [
     })
   
   })
-app.get('/hhh',(request,response)=>{
+app.get('/allStudents',(request,response)=>{
   response.status(200).json({
     message :"data is ok",
     data:students
@@ -33,3 +44,23 @@ app.get('/hhh',(request,response)=>{
 app.listen(3000,()=>{
   console.log("server is running");
 })
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
