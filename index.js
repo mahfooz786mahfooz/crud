@@ -16,6 +16,20 @@ const students = [
       { id:3,name :"Raman",
     email :"raman@gmail.com",
     add:"amnour",
+    moblile:"7400000022"} ,
+   { id:4,name :"akram",
+    email :"akram563@gmail.com",
+    add:"amnour",
+    moblile:"7400000022"} ,
+
+      { id:5,name :"manjit",
+    email :"amnjit@gmail.com",
+    add:"amnour",
+    moblile:"7400000022"} ,
+
+      { id:6,name :"Rohan",
+    email :"rohan@gmail.com",
+    add:"amnour",
     moblile:"7400000022"} 
   ];
 
